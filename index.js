@@ -31,7 +31,9 @@ const offerRoutes = require("./routes/offer");
 app.use(userRoutes);
 app.use(offerRoutes);
 //_______________________________________________\\
-
+app.get("/", (req, res) => {
+  res.json("Bienvenue sur mon API de Vinted");
+});
 //ALL ROUTE & SERVER PORT\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 app.all("*", (req, res) => {
   res.status(404).json({ error: "None existing route" });

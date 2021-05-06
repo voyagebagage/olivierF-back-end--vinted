@@ -5,8 +5,8 @@ const mongoose = require("mongoose");
 const cloudinary = require("cloudinary").v2;
 const cors = require("cors");
 
-app.use(cors());
 const app = express();
+app.use(cors());
 app.use(formidable());
 // app.use(formidableMiddleware());
 
